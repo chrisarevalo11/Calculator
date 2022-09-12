@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&family=Silkscreen&display=swap');
+
+:root {
+    --bg-color: #224870;
+    --button-color: #c7ccd1;
+    --button-active-color: #8a8d8f;
+    --display-color: #2c2c2d;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Silkscreen';
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg-color);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 65px);
+    grid-template-rows: 130px repeat(5, 65px);
+    background-color: var(--button-color);
+    padding: 15px;
+    border-radius: 32px;
+    box-shadow: 15px 15px 0 5px #00000033;
+}
+
+button {
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    border-radius: 30px;
+    box-shadow: 3px 3px 0 0.6px #00000033;
+    font-size: 1.5em;
+}
+
+button:active {
+    background-color: var(--button-active-color);
+}
+
+.display {
+    grid-column: 1 / span 4;
+    padding: 10px 13px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: var(--display-color);
+    color: #fff;
+    border-radius: 30px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    box-shadow: 0 0 0 10px #00000077;
+}
+
+.col-2 {
+    grid-column: span 2;
+}
+
+#previous {
+    font-size: 1.7em;
+}
+
+#current {
+    font-size: 1.5em;
+}
